@@ -1,0 +1,1 @@
+INSERT INTO USUARIO (ID, EMAIL, NOME, SENHA) VALUES( NULL, 'rita@gmail.com', 'Rita de Cássia dos Santos', '123abc');
