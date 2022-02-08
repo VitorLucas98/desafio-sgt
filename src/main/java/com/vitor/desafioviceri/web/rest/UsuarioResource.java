@@ -20,9 +20,9 @@ public class UsuarioResource {
     private final UsuarioService service;
 
     @PostMapping
-    public ResponseEntity<UsuarioDTO> inserir(@RequestBody UsuarioDTO dto){
+    public ResponseEntity<Void> inserir(@RequestBody UsuarioDTO dto){
         dto = service.inserir(dto);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("{id}").buildAndExpand(dto.getId()).toUri();
-        return ResponseEntity.created(uri).body(dto);
+        return ResponseEntity.created(uri).build();
     }
 }

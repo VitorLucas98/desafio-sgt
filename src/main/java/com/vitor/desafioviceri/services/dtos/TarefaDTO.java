@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 @Getter
@@ -20,10 +21,10 @@ public class TarefaDTO implements Serializable {
     @NotBlank(message = "Preenchimento obrigatório")
     private String descricao;
 
-    @NotBlank(message = "Preenchimento obrigatório")
+    @NotNull(message = "Preenchimento obrigatório")
     private Prioridade prioridade;
 
     private boolean concluida = false;
 
-    private UsuarioDTO usuario;
+    private Long idUsuario;
 }
